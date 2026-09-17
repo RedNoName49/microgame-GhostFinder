@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://l3elmlefqi7w"]
+
+[ext_resource type="Texture2D" uid="uid://c1m67sw0h3e" path="res://GhostGame/Placeholder assets/ghost placeholder.png" id="1_7dgdh"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_d0siw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_7dgdh")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Ghost" type="Node2D" unique_id=1422598180]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=903846183]
+sprite_frames = SubResource("SpriteFrames_d0siw")

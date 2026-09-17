@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://ctnwl6o5v62gs"]
+
+[ext_resource type="Script" uid="uid://c3mjcep68k4xp" path="res://GhostGame/Scripts/point_light_2d.gd" id="1_nk6ki"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_d0siw"]
+
+[node name="Flashlight" type="Node2D" unique_id=2066271764]
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=1139758681]
+blend_mode = 2
+texture = SubResource("ImageTexture_d0siw")
+script = ExtResource("1_nk6ki")
