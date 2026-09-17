@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://l3elmlefqi7w"]
 
 [ext_resource type="Texture2D" uid="uid://c1m67sw0h3e" path="res://GhostGame/Placeholder assets/ghost placeholder.png" id="1_7dgdh"]
+[ext_resource type="Script" uid="uid://mdceqda8svvq" path="res://GhostGame/Scenes/ghost_collision.gd" id="2_7epuf"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_d0siw"]
 animations = [{
@@ -13,7 +14,18 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_d0siw"]
+radius = 38.118237
+
 [node name="Ghost" type="Node2D" unique_id=1422598180]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=903846183]
+position = Vector2(0, 1.9073486e-06)
+scale = Vector2(0.22529644, 0.1954674)
 sprite_frames = SubResource("SpriteFrames_d0siw")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=402897982]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=562861611]
+shape = SubResource("CircleShape2D_d0siw")
+script = ExtResource("2_7epuf")

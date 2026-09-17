@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://c0smtutt2b6cn"]
+
+[ext_resource type="Texture2D" uid="uid://bo5g8h7ruia7j" path="res://GhostGame/Placeholder assets/Box Placeholder.jpg" id="1_1h66p"]
+
+[node name="Box" type="Node2D" unique_id=233560082]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1302919236]
+position = Vector2(9.536743e-07, -9.536743e-07)
+scale = Vector2(0.29059827, 0.33723652)
+texture = ExtResource("1_1h66p")

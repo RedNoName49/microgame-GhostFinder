@@ -1,8 +1,13 @@
 [gd_scene format=3 uid="uid://ctnwl6o5v62gs"]
 
 [ext_resource type="Script" uid="uid://c3mjcep68k4xp" path="res://GhostGame/Scripts/point_light_2d.gd" id="1_nk6ki"]
+[ext_resource type="Texture2D" uid="uid://b13rq6eyj0mt2" path="res://GhostGame/Placeholder assets/flashlight placeholder.png" id="2_ee1rg"]
+[ext_resource type="Script" uid="uid://blf7rcr45lcil" path="res://GhostGame/Scripts/flashlight_sprite.gd" id="3_xirgf"]
 
 [sub_resource type="ImageTexture" id="ImageTexture_d0siw"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_d0siw"]
+radius = 57.0
 
 [node name="Flashlight" type="Node2D" unique_id=2066271764]
 
@@ -10,3 +15,16 @@
 blend_mode = 2
 texture = SubResource("ImageTexture_d0siw")
 script = ExtResource("1_nk6ki")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=170656664]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=428975219]
+shape = SubResource("CircleShape2D_d0siw")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1033810415]
+modulate = Color(1, 1, 0.9647059, 1)
+self_modulate = Color(1, 1, 1, 0.32156864)
+position = Vector2(-0.49999908, -0.49999315)
+scale = Vector2(0.5, 0.51541847)
+texture = ExtResource("2_ee1rg")
+script = ExtResource("3_xirgf")
