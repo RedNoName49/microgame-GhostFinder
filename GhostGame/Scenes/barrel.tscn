@@ -2,9 +2,13 @@
 
 [ext_resource type="Texture2D" uid="uid://b17b1fdtvoyi" path="res://GhostGame/Placeholder assets/barrel.png" id="1_iahsa"]
 
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_joipw"]
+light_mode = 2
+
 [node name="Barrel" type="Node2D" unique_id=589035732]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1006712967]
+material = SubResource("CanvasItemMaterial_joipw")
 position = Vector2(-5.722046e-06, -1.9073486e-06)
 scale = Vector2(0.516129, 0.47477746)
 texture = ExtResource("1_iahsa")

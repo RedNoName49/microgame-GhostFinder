@@ -1,17 +1,37 @@
 [gd_scene format=3 uid="uid://bdwp236we6o88"]
 
+[ext_resource type="Script" uid="uid://df24nklrtpd5u" path="res://GhostGame/room_1.gd" id="1_j87sx"]
 [ext_resource type="Texture2D" uid="uid://c4rwt5ljxa3kp" path="res://GhostGame/Rooms/Assets/room placeholder.jpg" id="1_uc2ch"]
 [ext_resource type="PackedScene" uid="uid://l3elmlefqi7w" path="res://GhostGame/Scenes/ghost.tscn" id="2_trcem"]
 [ext_resource type="PackedScene" uid="uid://7nj1okjhex2u" path="res://GhostGame/Scenes/barrel.tscn" id="3_j87sx"]
+[ext_resource type="PackedScene" uid="uid://bgm20bcfigrm8" path="res://GhostGame/darkness.tscn" id="3_u5cq7"]
 [ext_resource type="PackedScene" uid="uid://c0smtutt2b6cn" path="res://GhostGame/Scenes/box.tscn" id="4_h1vdc"]
+[ext_resource type="Script" uid="uid://c236fjprnexym" path="res://GhostGame/Scripts/ghost_spawn2.gd" id="4_l8hux"]
 [ext_resource type="PackedScene" uid="uid://cqvqamcvqo0nr" path="res://GhostGame/Scenes/chair.tscn" id="5_0cgkm"]
+[ext_resource type="Script" uid="uid://cirftgxvlylub" path="res://GhostGame/Scripts/ghost_spawn3.gd" id="5_u5cq7"]
 [ext_resource type="PackedScene" uid="uid://ctnwl6o5v62gs" path="res://GhostGame/Scenes/flashlight.tscn" id="6_l8hux"]
+[ext_resource type="Script" uid="uid://coxn5cl0kp2wd" path="res://GhostGame/Scenes/ghost_manager4.gd" id="6_oppeo"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_broj7"]
+light_mode = 1
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_ovbv5"]
+light_mode = 2
 
 [node name="Room1" type="Node2D" unique_id=246662900]
+script = ExtResource("1_j87sx")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1004233685]
 
+[node name="Flashlight" parent="." unique_id=2066271764 instance=ExtResource("6_l8hux")]
+position = Vector2(-288, 88)
+
+[node name="Darkness" parent="." unique_id=1076800480 instance=ExtResource("3_u5cq7")]
+material = SubResource("CanvasItemMaterial_broj7")
+scale = Vector2(2.5200012, 1.9599996)
+
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=635259728]
+material = SubResource("CanvasItemMaterial_ovbv5")
 position = Vector2(2.6226044e-05, 1.1519382e-05)
 scale = Vector2(0.21345028, 0.18421052)
 texture = ExtResource("1_uc2ch")
@@ -21,12 +41,15 @@ position = Vector2(-144, -288)
 
 [node name="Ghost2" parent="." unique_id=2072065026 instance=ExtResource("2_trcem")]
 position = Vector2(-352, 256)
+script = ExtResource("4_l8hux")
 
 [node name="Ghost3" parent="." unique_id=1582101557 instance=ExtResource("2_trcem")]
 position = Vector2(88, -80)
+script = ExtResource("5_u5cq7")
 
 [node name="Ghost4" parent="." unique_id=106952221 instance=ExtResource("2_trcem")]
 position = Vector2(488, 72)
+script = ExtResource("6_oppeo")
 
 [node name="Barrel" parent="." unique_id=589035732 instance=ExtResource("3_j87sx")]
 position = Vector2(432, 96)
@@ -35,7 +58,4 @@ position = Vector2(432, 96)
 position = Vector2(88, -16)
 
 [node name="Chair" parent="." unique_id=1259396283 instance=ExtResource("5_0cgkm")]
-position = Vector2(-288, 88)
-
-[node name="Flashlight" parent="." unique_id=2066271764 instance=ExtResource("6_l8hux")]
 position = Vector2(-288, 88)

@@ -2,9 +2,13 @@
 
 [ext_resource type="Texture2D" uid="uid://dh0dbawf7kbvx" path="res://GhostGame/Placeholder assets/chair placeholder.png" id="1_tm02c"]
 
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_1h66p"]
+light_mode = 2
+
 [node name="Chair" type="Node2D" unique_id=1259396283]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=305294373]
+material = SubResource("CanvasItemMaterial_1h66p")
 position = Vector2(-23.999989, 43.999996)
 scale = Vector2(0.08812393, 0.10576272)
 texture = ExtResource("1_tm02c")

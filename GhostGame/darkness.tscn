@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://bgm20bcfigrm8"]
+
+[ext_resource type="Texture2D" uid="uid://bxto5srmg2m2n" path="res://GhostGame/Assets/darkness.png" id="1_56qaq"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_gsi7o"]
+light_mode = 1
+
+[node name="Darkness" type="Node2D" unique_id=1076800480]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1721238992]
+material = SubResource("CanvasItemMaterial_gsi7o")
+texture = ExtResource("1_56qaq")
