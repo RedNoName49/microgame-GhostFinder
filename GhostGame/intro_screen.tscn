@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://cqa2ikc0sye5f"]
+
+[ext_resource type="Texture2D" uid="uid://b7qdkb560mrfg" path="res://GhostGame/Placeholder assets/intro screen placeholder.png" id="1_d3lf4"]
+[ext_resource type="Script" uid="uid://bc1ks67up2df0" path="res://GhostGame/Scripts/ghost_intro.gd" id="1_ncgmk"]
+[ext_resource type="Script" uid="uid://c0eq70gyg7rhf" path="res://Framework/Addons/TweenTool/Scripts/Components/control_tween.gd" id="3_hatxr"]
+[ext_resource type="Script" uid="uid://dby7depabb4fv" path="res://Framework/Addons/TweenTool/Scripts/TweenResources/canvas_item_tween.gd" id="4_jdlvh"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7evtv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_d3lf4")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Resource" id="Resource_vf2s6"]
+script = ExtResource("4_jdlvh")
+end_modulate = Color(1, 1, 1, 0)
+metadata/_custom_type_script = "uid://dby7depabb4fv"
+
+[node name="intro_screen" type="Control" unique_id=1016381496]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+offset_transform_enabled = true
+script = ExtResource("1_ncgmk")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=213483862]
+scale = Vector2(1.4345794, 1.9499999)
+sprite_frames = SubResource("SpriteFrames_7evtv")
+autoplay = "default"
+
+[node name="Disappear" type="Node" parent="." unique_id=276669733 node_paths=PackedStringArray("affected_node")]
+script = ExtResource("3_hatxr")
+affected_node = NodePath("..")
+canvas_item_tween = SubResource("Resource_vf2s6")
+trans_type = 5
+ease_type = 2
+tween_duration = 0.5
+metadata/_custom_type_script = "uid://c0eq70gyg7rhf"

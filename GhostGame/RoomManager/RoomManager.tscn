@@ -1,12 +1,20 @@
 [gd_scene format=3 uid="uid://b52fyeiuym7g8"]
 
 [ext_resource type="Script" uid="uid://xjvn6i6frxpg" path="res://GhostGame/RoomManager/room_manager.gd" id="1_0oasm"]
+[ext_resource type="PackedScene" uid="uid://cqa2ikc0sye5f" path="res://GhostGame/intro_screen.tscn" id="2_71sp1"]
 
-[node name="RoomManager" type="Control" unique_id=1256586480]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_gh0et"]
+
+[node name="RoomManager" type="Node2D" unique_id=323792324]
 script = ExtResource("1_0oasm")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1934658899]
+self_modulate = Color(0, 0, 0, 1)
+scale = Vector2(1288, 760)
+texture = SubResource("PlaceholderTexture2D_gh0et")
+
+[node name="intro_screen" parent="." unique_id=1016381496 instance=ExtResource("2_71sp1")]
+modulate = Color(1, 1, 1, 1)
+scale = Vector2(1.2599852, 1.0636293)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1770048068]
