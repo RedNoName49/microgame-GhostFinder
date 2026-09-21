@@ -33,7 +33,7 @@ offset_transform_enabled = true
 script = ExtResource("1_ncgmk")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=213483862]
-scale = Vector2(0.39257076, 0.3906589)
+scale = Vector2(0.3876704, 0.34130138)
 sprite_frames = SubResource("SpriteFrames_qx78m")
 autoplay = "default"
 

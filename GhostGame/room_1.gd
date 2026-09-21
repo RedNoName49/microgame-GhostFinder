@@ -11,9 +11,9 @@ var timer: float
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	timer = 20 * (1 - GameManager.difficulty_manager.current_difficulty)
-	if timer <= 7:
-		timer = 7
+	timer = 30 * (1 - GameManager.difficulty_manager.current_difficulty)
+	if timer <= 10:
+		timer = 10
 		
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

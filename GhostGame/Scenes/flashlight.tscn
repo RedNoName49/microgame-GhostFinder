@@ -6,6 +6,7 @@
 [node name="Flashlight" type="Node2D" unique_id=2066271764]
 
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=1139758681]
+scale = Vector2(1.5578811, 1.5747939)
 blend_mode = 2
 texture = ExtResource("1_ddyn2")
 texture_scale = 0.3

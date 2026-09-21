@@ -124,7 +124,8 @@ scale = Vector2(1.118012, 1.12393)
 [node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1374924067]
 self_modulate = Color(1, 1, 1, 0.3647059)
 material = SubResource("CanvasItemMaterial_0h4ac")
-scale = Vector2(0.4254379, 0.42922255)
+position = Vector2(-287.99997, 80)
+scale = Vector2(0.6022581, 0.6094951)
 texture = ExtResource("12_qx78m")
 script = ExtResource("13_y4e0l")
 

@@ -81,7 +81,7 @@ material = SubResource("CanvasItemMaterial_8h8ym")
 script = ExtResource("1_joipw")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=903846183]
-self_modulate = Color(1, 1, 1, 0.4)
+self_modulate = Color(1, 1, 1, 0.49019608)
 material = SubResource("CanvasItemMaterial_ovbv5")
 position = Vector2(0, -5.000001)
 scale = Vector2(0.32838243, 0.3152533)
@@ -102,6 +102,7 @@ shape = SubResource("CircleShape2D_d0siw")
 script = ExtResource("5_nm8s4")
 
 [node name="FlashlightCollisionShape2D" type="CollisionShape2D" parent="FlashlightArea2D" unique_id=1008580880]
+scale = Vector2(1.3041883, 1.2764773)
 shape = SubResource("CircleShape2D_nm8s4")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=278939547]

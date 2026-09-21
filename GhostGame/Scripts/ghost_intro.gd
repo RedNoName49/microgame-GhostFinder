@@ -8,7 +8,7 @@ func _ready() -> void:
 	intro.visible = true
 
 func StartIntro() -> void:
-	await get_tree().create_timer(3, false).timeout
+	await get_tree().create_timer(2, false).timeout
 	disappear.do_tween()
 	await disappear.tween.finished
 	canStart.emit()

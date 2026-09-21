@@ -99,6 +99,9 @@ texture = ExtResource("4_xqiok")
 position = Vector2(91, -221)
 scale = Vector2(0.55797935, 0.53990453)
 
+[node name="FlashlightCollisionShape2D" parent="Ghost/FlashlightArea2D" parent_id_path=PackedInt32Array(1422598180, 1782309455) index="0" unique_id=1008580880]
+scale = Vector2(2.2372458, 2.269774)
+
 [node name="Ghost2" parent="." unique_id=2072065026 instance=ExtResource("5_cqm6w")]
 position = Vector2(-475, -230)
 script = ExtResource("6_hobx5")
@@ -107,6 +110,9 @@ script = ExtResource("6_hobx5")
 position = Vector2(-143, -26)
 scale = Vector2(0.6307645, 0.63155377)
 script = ExtResource("7_eemek")
+
+[node name="FlashlightCollisionShape2D" parent="Ghost3/FlashlightArea2D" parent_id_path=PackedInt32Array(1582101557, 1782309455) index="0" unique_id=1008580880]
+scale = Vector2(2.0400589, 2.0506032)
 
 [node name="Ghost4" parent="." unique_id=106952221 instance=ExtResource("5_cqm6w")]
 position = Vector2(433, 98)
@@ -124,10 +130,11 @@ scale = Vector2(1, 0.9834233)
 position = Vector2(69, -244.99998)
 scale = Vector2(0.56294566, 0.47686958)
 
-[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1374924067]
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=552217879]
 self_modulate = Color(1, 1, 1, 0.3647059)
 material = SubResource("CanvasItemMaterial_0h4ac")
-scale = Vector2(0.4254379, 0.42922255)
+position = Vector2(-287.99997, 87)
+scale = Vector2(0.65087914, 0.65149933)
 texture = ExtResource("10_2odw0")
 script = ExtResource("11_vmd87")
 

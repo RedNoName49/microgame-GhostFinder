@@ -2,7 +2,7 @@ extends Area2D
 
 var winTime: float = 0.0
 var isColliding: bool = false
-var timeDuration: float = 3
+var timeDuration: float = 2
 var soundPlayed: bool = false
 
 
@@ -14,6 +14,7 @@ func CountDownFinish() -> void:
 	if soundPlayed == false:
 		$"../AudioStreamPlayer".play()
 		soundPlayed = true
+	animationPlayer.play("RESET")
 	GameManager.win()
 	
 func CountDownReset() -> void:
@@ -26,12 +27,12 @@ func _process(delta: float) -> void:
 	if isColliding and winTime > 0: 
 		winTime -= delta
 	
-	if winTime <= 2.5:
+	if winTime <= 1.5:
 		animationPlayer.play("Shake")
 	else:
 		animationPlayer.play("RESET")
 	
-	if winTime <= 0.8:
+	if winTime <= 0.5:
 		animatedSprite.play("Scream")
 	else:
 		animatedSprite.play("Normal")
