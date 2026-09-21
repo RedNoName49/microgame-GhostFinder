@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://b3ohlt0kd2o2l"]
+
+[ext_resource type="Texture2D" uid="uid://4fb3jlllyguk" path="res://GhostGame/Assets/wall.png" id="1_0l2rs"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_d0siw"]
+light_mode = 2
+
+[node name="wall" type="Node2D" unique_id=1564988816]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=756310085]
+material = SubResource("CanvasItemMaterial_d0siw")
+scale = Vector2(0.6117431, 0.43308142)
+texture = ExtResource("1_0l2rs")

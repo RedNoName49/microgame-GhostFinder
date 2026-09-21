@@ -11,7 +11,6 @@ var soundPlayed: bool = false
 @onready var animatedSprite: AnimatedSprite2D = $"../AnimatedSprite2D"
 
 func CountDownFinish() -> void: 
-	print("win!")
 	if soundPlayed == false:
 		$"../AudioStreamPlayer".play()
 		soundPlayed = true
@@ -19,7 +18,6 @@ func CountDownFinish() -> void:
 	
 func CountDownReset() -> void:
 	winTime = timeDuration
-	print("countdown reset")
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	winTime = timeDuration
@@ -27,9 +25,8 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if isColliding and winTime > 0: 
 		winTime -= delta
-		print("winning in:", snapped(winTime, 0.01))
 	
-	if winTime <= 2:
+	if winTime <= 2.5:
 		animationPlayer.play("Shake")
 	else:
 		animationPlayer.play("RESET")

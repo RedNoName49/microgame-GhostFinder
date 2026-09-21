@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://l3elmlefqi7w"]
 
-[ext_resource type="Texture2D" uid="uid://c1m67sw0h3e" path="res://GhostGame/Placeholder assets/ghost placeholder.png" id="1_7dgdh"]
 [ext_resource type="Script" uid="uid://bxnhhrujhnmup" path="res://GhostGame/Scenes/ghost_spawn.gd" id="1_joipw"]
-[ext_resource type="Texture2D" uid="uid://dqu17q2ck668g" path="res://GhostGame/Placeholder assets/stupid baby placeholder.png" id="3_qdpe7"]
+[ext_resource type="Texture2D" uid="uid://bawrttkrixicp" path="res://GhostGame/Assets/ghost.png" id="2_hrn84"]
+[ext_resource type="Texture2D" uid="uid://byci1qp6x8i6x" path="res://GhostGame/Assets/stupid baby.png" id="3_gsi7o"]
 [ext_resource type="Script" uid="uid://ct184ykpug1q2" path="res://GhostGame/Scripts/area_2d_ghost.gd" id="4_qdpe7"]
 [ext_resource type="Script" uid="uid://duosu8q2uy7il" path="res://GhostGame/Scenes/flashlight_Area2d_position.gd" id="5_nm8s4"]
 [ext_resource type="AudioStream" uid="uid://q5ecxho5q010" path="res://GhostGame/Assets/Sounds/Correct.mp3" id="6_hrn84"]
@@ -10,14 +10,14 @@
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_8h8ym"]
 light_mode = 2
 
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_dgl4p"]
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_ovbv5"]
 light_mode = 2
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_d0siw"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_7dgdh")
+"texture": ExtResource("2_hrn84")
 }],
 "loop": 1,
 "name": &"Normal",
@@ -25,7 +25,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_qdpe7")
+"texture": ExtResource("3_gsi7o")
 }],
 "loop": 1,
 "name": &"Scream",
@@ -81,9 +81,10 @@ material = SubResource("CanvasItemMaterial_8h8ym")
 script = ExtResource("1_joipw")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=903846183]
-material = SubResource("CanvasItemMaterial_dgl4p")
-position = Vector2(0, 1.9073486e-06)
-scale = Vector2(0.22529644, 0.1954674)
+self_modulate = Color(1, 1, 1, 0.4)
+material = SubResource("CanvasItemMaterial_ovbv5")
+position = Vector2(0, -5.000001)
+scale = Vector2(0.32838243, 0.3152533)
 sprite_frames = SubResource("SpriteFrames_d0siw")
 animation = &"Normal"
 

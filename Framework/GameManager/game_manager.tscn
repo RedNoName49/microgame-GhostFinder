@@ -8,6 +8,7 @@
 [ext_resource type="Script" uid="uid://c3mrx4uhci7mj" path="res://Framework/GameManager/Subsystems/difficulty_manager.gd" id="5_t61i1"]
 [ext_resource type="PackedScene" uid="uid://bn27b68n38yf3" path="res://SimpleExampleGame/example_game.tscn" id="6_rkw5e"]
 [ext_resource type="Script" uid="uid://cxpxg24xypn71" path="res://Framework/GameManager/Subsystems/save_data_manager.gd" id="7_fvqjh"]
+[ext_resource type="PackedScene" uid="uid://b52fyeiuym7g8" path="res://GhostGame/RoomManager/RoomManager.tscn" id="7_yaiu7"]
 [ext_resource type="PackedScene" uid="uid://bbooefhwr82h6" path="res://Framework/GameManager/Subsystems/WinLoseScreen/win_lose_screen.tscn" id="8_vy41y"]
 
 [sub_resource type="Resource" id="Resource_yf5fn"]
@@ -56,7 +57,7 @@ canvas_item_tween = SubResource("Resource_g4v7s")
 [node name="MicrogameQueue" type="Node" parent="." unique_id=1538349654]
 unique_name_in_owner = true
 script = ExtResource("4_fvqjh")
-microgames = Array[PackedScene]([ExtResource("5_bl30x"), ExtResource("6_rkw5e")])
+microgames = Array[PackedScene]([ExtResource("5_bl30x"), ExtResource("6_rkw5e"), ExtResource("7_yaiu7")])
 
 [node name="DifficultyManager" type="Node" parent="." unique_id=1315344751]
 unique_name_in_owner = true

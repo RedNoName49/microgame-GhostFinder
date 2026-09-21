@@ -1,14 +1,13 @@
 [gd_scene format=3 uid="uid://c0smtutt2b6cn"]
 
-[ext_resource type="Texture2D" uid="uid://bo5g8h7ruia7j" path="res://GhostGame/Placeholder assets/Box Placeholder.jpg" id="1_1h66p"]
+[ext_resource type="Texture2D" uid="uid://dabjut1ma1g44" path="res://GhostGame/Assets/box.png" id="2_dfso1"]
 
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_iahsa"]
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_uk8b3"]
 light_mode = 2
 
 [node name="Box" type="Node2D" unique_id=233560082]
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1302919236]
-material = SubResource("CanvasItemMaterial_iahsa")
-position = Vector2(9.536743e-07, -9.536743e-07)
-scale = Vector2(0.29059827, 0.33723652)
-texture = ExtResource("1_1h66p")
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=726846764]
+material = SubResource("CanvasItemMaterial_uk8b3")
+scale = Vector2(0.48852265, 0.5198241)
+texture = ExtResource("2_dfso1")

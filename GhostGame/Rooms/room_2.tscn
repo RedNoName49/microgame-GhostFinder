@@ -1,0 +1,164 @@
+[gd_scene format=3 uid="uid://cdpre07sd1cam"]
+
+[ext_resource type="Script" uid="uid://df24nklrtpd5u" path="res://GhostGame/room_1.gd" id="1_qeela"]
+[ext_resource type="PackedScene" uid="uid://ctnwl6o5v62gs" path="res://GhostGame/Scenes/flashlight.tscn" id="2_x5bbu"]
+[ext_resource type="PackedScene" uid="uid://bgm20bcfigrm8" path="res://GhostGame/darkness.tscn" id="3_lj45u"]
+[ext_resource type="Texture2D" uid="uid://bqx23wh644tqu" path="res://GhostGame/Rooms/Assets/room2.png" id="4_xqiok"]
+[ext_resource type="PackedScene" uid="uid://l3elmlefqi7w" path="res://GhostGame/Scenes/ghost.tscn" id="5_cqm6w"]
+[ext_resource type="Script" uid="uid://c236fjprnexym" path="res://GhostGame/Scripts/ghost_spawn2.gd" id="6_hobx5"]
+[ext_resource type="Script" uid="uid://cirftgxvlylub" path="res://GhostGame/Scripts/ghost_spawn3.gd" id="7_eemek"]
+[ext_resource type="Script" uid="uid://coxn5cl0kp2wd" path="res://GhostGame/Scenes/ghost_manager4.gd" id="8_j0dl0"]
+[ext_resource type="PackedScene" uid="uid://b3ohlt0kd2o2l" path="res://GhostGame/Scenes/wall.tscn" id="9_qtllv"]
+[ext_resource type="Texture2D" uid="uid://beitcx8lip2wb" path="res://GhostGame/Assets/flashlight.jpg" id="10_2odw0"]
+[ext_resource type="Script" uid="uid://d134uwulr6ka" path="res://GhostGame/Scripts/flashlight_texture.gd" id="11_vmd87"]
+[ext_resource type="Texture2D" uid="uid://bfdjmynhmwqa3" path="res://GhostGame/Assets/ffffff-p.png" id="12_f7tbe"]
+[ext_resource type="Texture2D" uid="uid://di1rsv36ravy8" path="res://GhostGame/Assets/jumpscare.png" id="13_3tuvt"]
+[ext_resource type="AudioStream" uid="uid://bp1kf2qkwd4i4" path="res://GhostGame/Assets/Sounds/Roar.mp3" id="14_3s3sp"]
+[ext_resource type="AudioStream" uid="uid://bbqr16dk6skyp" path="res://GhostGame/Assets/Sounds/Ambience.mp3" id="15_0f6v7"]
+[ext_resource type="PackedScene" uid="uid://dp5wvlnkpg5x5" path="res://GhostGame/Scenes/pillar.tscn" id="16_l5i7l"]
+[ext_resource type="PackedScene" uid="uid://doax7odamjr6t" path="res://GhostGame/Scenes/chandalire.tscn" id="17_j4rdx"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_broj7"]
+light_mode = 1
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_ovbv5"]
+light_mode = 2
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_0h4ac"]
+light_mode = 2
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_d0siw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_3tuvt")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_xwaok"]
+resource_name = "Jumpscare"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.06666667, 0.13333334, 0.16666667, 0.19999999, 0.26666668, 0.33333337, 0.4000001, 0.4333334, 0.4666667, 0.5333334, 0.60000014, 0.7, 0.7333333, 0.7666666, 0.8333333, 0.90000004),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-1008, 616.00006), Vector2(-250, 0), Vector2(-245, 6), Vector2(-260, -3), Vector2(-255, 8), Vector2(-243, 0), Vector2(-255, -4), Vector2(-245, 6), Vector2(-260, -3), Vector2(-255, 8), Vector2(-243, 0), Vector2(-255, -4), Vector2(-245, 6), Vector2(-260, -3), Vector2(-255, 8), Vector2(-243, 0), Vector2(-255, -4)]
+}
+
+[sub_resource type="Animation" id="Animation_skr5q"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-1008, 616.00006)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_e0fdr"]
+_data = {
+&"Jumpscare": SubResource("Animation_xwaok"),
+&"RESET": SubResource("Animation_skr5q")
+}
+
+[sub_resource type="SystemFont" id="SystemFont_d0siw"]
+font_names = PackedStringArray("Chiller")
+
+[node name="Room2" type="Node2D" unique_id=246662900]
+script = ExtResource("1_qeela")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1004233685]
+
+[node name="Flashlight" parent="." unique_id=2066271764 instance=ExtResource("2_x5bbu")]
+position = Vector2(-288, 88)
+
+[node name="Darkness" parent="." unique_id=1076800480 instance=ExtResource("3_lj45u")]
+material = SubResource("CanvasItemMaterial_broj7")
+scale = Vector2(2.5200012, 1.9599996)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=635259728]
+material = SubResource("CanvasItemMaterial_ovbv5")
+position = Vector2(2.6226044e-05, 1.1519382e-05)
+scale = Vector2(0.46180806, 0.4132335)
+texture = ExtResource("4_xqiok")
+
+[node name="Ghost" parent="." unique_id=1422598180 instance=ExtResource("5_cqm6w")]
+position = Vector2(91, -221)
+scale = Vector2(0.55797935, 0.53990453)
+
+[node name="Ghost2" parent="." unique_id=2072065026 instance=ExtResource("5_cqm6w")]
+position = Vector2(-475, -230)
+script = ExtResource("6_hobx5")
+
+[node name="Ghost3" parent="." unique_id=1582101557 instance=ExtResource("5_cqm6w")]
+position = Vector2(-143, -26)
+scale = Vector2(0.6307645, 0.63155377)
+script = ExtResource("7_eemek")
+
+[node name="Ghost4" parent="." unique_id=106952221 instance=ExtResource("5_cqm6w")]
+position = Vector2(433, 98)
+script = ExtResource("8_j0dl0")
+
+[node name="wall" parent="." unique_id=1564988816 instance=ExtResource("9_qtllv")]
+position = Vector2(434, 4)
+scale = Vector2(0.8251093, 1)
+
+[node name="pillar" parent="." unique_id=993845085 instance=ExtResource("16_l5i7l")]
+position = Vector2(-159, -9)
+scale = Vector2(1, 0.9834233)
+
+[node name="chandalire" parent="." unique_id=1467857189 instance=ExtResource("17_j4rdx")]
+position = Vector2(69, -244.99998)
+scale = Vector2(0.56294566, 0.47686958)
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1374924067]
+self_modulate = Color(1, 1, 1, 0.3647059)
+material = SubResource("CanvasItemMaterial_0h4ac")
+scale = Vector2(0.4254379, 0.42922255)
+texture = ExtResource("10_2odw0")
+script = ExtResource("11_vmd87")
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=361430465]
+visible = false
+scale = Vector2(2.0194888, 1.275871)
+blend_mode = 2
+texture = ExtResource("12_f7tbe")
+
+[node name="LoseJumpscare" type="AnimatedSprite2D" parent="." unique_id=2108031117]
+position = Vector2(-1008, 616.00006)
+scale = Vector2(0.50113183, 0.4973775)
+sprite_frames = SubResource("SpriteFrames_d0siw")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="LoseJumpscare" unique_id=1079487940]
+libraries/ = SubResource("AnimationLibrary_e0fdr")
+
+[node name="Roar" type="AudioStreamPlayer" parent="LoseJumpscare" unique_id=305540314]
+stream = ExtResource("14_3s3sp")
+
+[node name="Label" type="Label" parent="." unique_id=716796990]
+offset_left = 496.0
+offset_top = 232.0
+offset_right = 569.0
+offset_bottom = 320.0
+theme_override_fonts/font = SubResource("SystemFont_d0siw")
+theme_override_font_sizes/font_size = 86
+
+[node name="Ambience" type="AudioStreamPlayer" parent="." unique_id=1238428313]
+stream = ExtResource("15_0f6v7")
+autoplay = true
+
+[editable path="Ghost"]
+[editable path="Ghost3"]

@@ -1,14 +1,13 @@
 [gd_scene format=3 uid="uid://7nj1okjhex2u"]
 
-[ext_resource type="Texture2D" uid="uid://b17b1fdtvoyi" path="res://GhostGame/Placeholder assets/barrel.png" id="1_iahsa"]
+[ext_resource type="Texture2D" uid="uid://bpsg7n8tqrwjr" path="res://GhostGame/Assets/barrel (2).png" id="1_iahsa"]
 
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_joipw"]
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_d0siw"]
 light_mode = 2
 
 [node name="Barrel" type="Node2D" unique_id=589035732]
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1006712967]
-material = SubResource("CanvasItemMaterial_joipw")
-position = Vector2(-5.722046e-06, -1.9073486e-06)
-scale = Vector2(0.516129, 0.47477746)
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1900945553]
+material = SubResource("CanvasItemMaterial_d0siw")
+scale = Vector2(0.4864936, 0.46907914)
 texture = ExtResource("1_iahsa")

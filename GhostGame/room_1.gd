@@ -21,7 +21,6 @@ func _process(delta: float) -> void:
 	if timer > 0:
 		$Label.text = str(ceili(timer))
 	if timer <= 0:
-		print("you lose")
 		$Ambience.stop()
 		if soundPlayed == false:
 			$LoseJumpscare/Roar.play()

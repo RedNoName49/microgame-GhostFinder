@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://dp5wvlnkpg5x5"]
+
+[ext_resource type="Texture2D" uid="uid://dfryp18pxbyag" path="res://GhostGame/Assets/pillar.png" id="1_qey16"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_d0siw"]
+light_mode = 2
+
+[node name="pillar" type="Node2D" unique_id=993845085]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1119956360]
+material = SubResource("CanvasItemMaterial_d0siw")
+scale = Vector2(0.50413215, 0.4247104)
+texture = ExtResource("1_qey16")

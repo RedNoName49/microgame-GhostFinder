@@ -1,20 +1,22 @@
 [gd_scene format=3 uid="uid://bdwp236we6o88"]
 
 [ext_resource type="Script" uid="uid://df24nklrtpd5u" path="res://GhostGame/room_1.gd" id="1_j87sx"]
-[ext_resource type="Texture2D" uid="uid://c4rwt5ljxa3kp" path="res://GhostGame/Rooms/Assets/room placeholder.jpg" id="1_uc2ch"]
 [ext_resource type="PackedScene" uid="uid://l3elmlefqi7w" path="res://GhostGame/Scenes/ghost.tscn" id="2_trcem"]
 [ext_resource type="PackedScene" uid="uid://7nj1okjhex2u" path="res://GhostGame/Scenes/barrel.tscn" id="3_j87sx"]
 [ext_resource type="PackedScene" uid="uid://bgm20bcfigrm8" path="res://GhostGame/darkness.tscn" id="3_u5cq7"]
 [ext_resource type="PackedScene" uid="uid://c0smtutt2b6cn" path="res://GhostGame/Scenes/box.tscn" id="4_h1vdc"]
 [ext_resource type="Script" uid="uid://c236fjprnexym" path="res://GhostGame/Scripts/ghost_spawn2.gd" id="4_l8hux"]
+[ext_resource type="Texture2D" uid="uid://cti3eu4hr52sa" path="res://GhostGame/Rooms/Assets/room1.png" id="4_qx78m"]
 [ext_resource type="PackedScene" uid="uid://cqvqamcvqo0nr" path="res://GhostGame/Scenes/chair.tscn" id="5_0cgkm"]
 [ext_resource type="Script" uid="uid://cirftgxvlylub" path="res://GhostGame/Scripts/ghost_spawn3.gd" id="5_u5cq7"]
 [ext_resource type="PackedScene" uid="uid://ctnwl6o5v62gs" path="res://GhostGame/Scenes/flashlight.tscn" id="6_l8hux"]
 [ext_resource type="Script" uid="uid://coxn5cl0kp2wd" path="res://GhostGame/Scenes/ghost_manager4.gd" id="6_oppeo"]
 [ext_resource type="Texture2D" uid="uid://bfdjmynhmwqa3" path="res://GhostGame/Assets/ffffff-p.png" id="12_oppeo"]
-[ext_resource type="Texture2D" uid="uid://fnyyp7tfei7f" path="res://GhostGame/Placeholder assets/jumpscare placeholder.png" id="13_e0ken"]
+[ext_resource type="Texture2D" uid="uid://beitcx8lip2wb" path="res://GhostGame/Assets/flashlight.jpg" id="12_qx78m"]
+[ext_resource type="Script" uid="uid://d134uwulr6ka" path="res://GhostGame/Scripts/flashlight_texture.gd" id="13_y4e0l"]
 [ext_resource type="AudioStream" uid="uid://bp1kf2qkwd4i4" path="res://GhostGame/Assets/Sounds/Roar.mp3" id="14_skr5q"]
 [ext_resource type="AudioStream" uid="uid://bbqr16dk6skyp" path="res://GhostGame/Assets/Sounds/Ambience.mp3" id="14_xwaok"]
+[ext_resource type="Texture2D" uid="uid://di1rsv36ravy8" path="res://GhostGame/Assets/jumpscare.png" id="15_qx78m"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_broj7"]
 light_mode = 1
@@ -22,11 +24,14 @@ light_mode = 1
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_ovbv5"]
 light_mode = 2
 
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_0h4ac"]
+light_mode = 2
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_d0siw"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("13_e0ken")
+"texture": ExtResource("15_qx78m")
 }],
 "loop": 1,
 "name": &"default",
@@ -87,41 +92,51 @@ scale = Vector2(2.5200012, 1.9599996)
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=635259728]
 material = SubResource("CanvasItemMaterial_ovbv5")
 position = Vector2(2.6226044e-05, 1.1519382e-05)
-scale = Vector2(0.21345028, 0.18421052)
-texture = ExtResource("1_uc2ch")
+scale = Vector2(0.46180806, 0.4132335)
+texture = ExtResource("4_qx78m")
 
 [node name="Ghost" parent="." unique_id=1422598180 instance=ExtResource("2_trcem")]
 position = Vector2(-144, -288)
 
 [node name="Ghost2" parent="." unique_id=2072065026 instance=ExtResource("2_trcem")]
-position = Vector2(-352, 256)
+position = Vector2(-320, 296)
 script = ExtResource("4_l8hux")
 
 [node name="Ghost3" parent="." unique_id=1582101557 instance=ExtResource("2_trcem")]
-position = Vector2(88, -80)
+position = Vector2(120, -64)
 script = ExtResource("5_u5cq7")
 
 [node name="Ghost4" parent="." unique_id=106952221 instance=ExtResource("2_trcem")]
-position = Vector2(488, 72)
+position = Vector2(464, 96)
 script = ExtResource("6_oppeo")
 
 [node name="Barrel" parent="." unique_id=589035732 instance=ExtResource("3_j87sx")]
-position = Vector2(432, 96)
+position = Vector2(376, 128)
+scale = Vector2(1.0381458, 0.9324808)
 
 [node name="Box" parent="." unique_id=233560082 instance=ExtResource("4_h1vdc")]
-position = Vector2(88, -16)
+position = Vector2(120, -8)
 
 [node name="Chair" parent="." unique_id=1259396283 instance=ExtResource("5_0cgkm")]
-position = Vector2(-288, 88)
+position = Vector2(-288, 80)
+scale = Vector2(1.118012, 1.12393)
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1374924067]
+self_modulate = Color(1, 1, 1, 0.3647059)
+material = SubResource("CanvasItemMaterial_0h4ac")
+scale = Vector2(0.4254379, 0.42922255)
+texture = ExtResource("12_qx78m")
+script = ExtResource("13_y4e0l")
 
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=361430465]
+visible = false
 scale = Vector2(2.0194888, 1.275871)
 blend_mode = 2
 texture = ExtResource("12_oppeo")
 
 [node name="LoseJumpscare" type="AnimatedSprite2D" parent="." unique_id=2108031117]
 position = Vector2(-1008, 616.00006)
-scale = Vector2(2.2074325, 2.1439488)
+scale = Vector2(0.50113183, 0.4973775)
 sprite_frames = SubResource("SpriteFrames_d0siw")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="LoseJumpscare" unique_id=1079487940]

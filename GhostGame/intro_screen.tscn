@@ -1,15 +1,15 @@
 [gd_scene format=3 uid="uid://cqa2ikc0sye5f"]
 
-[ext_resource type="Texture2D" uid="uid://b7qdkb560mrfg" path="res://GhostGame/Placeholder assets/intro screen placeholder.png" id="1_d3lf4"]
 [ext_resource type="Script" uid="uid://bc1ks67up2df0" path="res://GhostGame/Scripts/ghost_intro.gd" id="1_ncgmk"]
+[ext_resource type="Texture2D" uid="uid://bjnmv4dhveywg" path="res://GhostGame/Assets/intro screen.png" id="2_ncgmk"]
 [ext_resource type="Script" uid="uid://c0eq70gyg7rhf" path="res://Framework/Addons/TweenTool/Scripts/Components/control_tween.gd" id="3_hatxr"]
 [ext_resource type="Script" uid="uid://dby7depabb4fv" path="res://Framework/Addons/TweenTool/Scripts/TweenResources/canvas_item_tween.gd" id="4_jdlvh"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_7evtv"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_qx78m"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_d3lf4")
+"texture": ExtResource("2_ncgmk")
 }],
 "loop": 1,
 "name": &"default",
@@ -33,8 +33,8 @@ offset_transform_enabled = true
 script = ExtResource("1_ncgmk")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=213483862]
-scale = Vector2(1.4345794, 1.9499999)
-sprite_frames = SubResource("SpriteFrames_7evtv")
+scale = Vector2(0.39257076, 0.3906589)
+sprite_frames = SubResource("SpriteFrames_qx78m")
 autoplay = "default"
 
 [node name="Disappear" type="Node" parent="." unique_id=276669733 node_paths=PackedStringArray("affected_node")]
